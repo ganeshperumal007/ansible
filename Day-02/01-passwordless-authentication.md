@@ -19,3 +19,7 @@ ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
 - Update `PasswordAuthentication yes`
 - Restart SSH -> `sudo systemctl restart ssh`
 
+### IF YOU'RE NOT USING EC2 INSTAANCE THEN
+- Go to `sudo /etc/shh/
+- Here you see `ssh_config` and `sshd_config` files
+- Go to `sudo vim /etc/ssh/sshd_config`    ==> - Update or Uncomment `PasswordAuthentication yes`

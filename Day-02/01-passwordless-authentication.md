@@ -14,9 +14,9 @@ ssh-copy-id -f "-o IdentityFile <PATH TO PEM FILE>" ubuntu@<INSTANCE-PUBLIC-IP>
 - ubuntu@<INSTANCE-IP>: This is the username (ubuntu) and the IP address of the remote server you want to access.
 
 Copy the key into WSL’s native filesystem:
-
+```
 cp /mnt/c/Users/ganes/Downloads/testkey.pem ~/.ssh/  #cp source-file(downloads in local machine) destination-file(ssh) 
-
+```
 Set the correct permissions on the copied file:
 
 chmod 400 ~/.ssh/testkey.pem

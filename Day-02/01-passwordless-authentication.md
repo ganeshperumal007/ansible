@@ -18,17 +18,17 @@ Copy the key into WSL’s native filesystem:
 cp /mnt/c/Users/ganes/Downloads/testkey.pem ~/.ssh/  #cp source-file(downloads in local machine) destination-file(ssh) 
 ```
 Set the correct permissions on the copied file:
-
+```
 chmod 400 ~/.ssh/testkey.pem
-
+```
 Now run ssh-copy-id using the key in your WSL home:
-
+```
 ssh-copy-id -f "-o IdentityFile=~/.ssh/testkey.pem" ubuntu@<INSTANCE-PUBLIC-IP>
-
+```
 Then try connecting:
-
+```
 ssh ubuntu@<INSTANCE-PUBLIC-IP>
-
+```
 ### Using Password 
 
 - Go to the file `/etc/ssh/sshd_config.d/60-cloudimg-settings.conf`
